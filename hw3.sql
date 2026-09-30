@@ -1,0 +1,27 @@
+-- task # 1.1
+SELECT * FROM products;
+
+-- task # 1.2
+SELECT name, phone FROM shippers;
+
+-- task # 2
+SELECT ROUND(AVG(price), 2) AS avg_price, MAX(price) AS max_price, MIN(price) AS min_price 
+FROM products;
+
+-- task # 23
+SELECT DISTINCT category_id, price
+FROM products
+ORDER BY price DESC
+LIMIT 10;
+
+-- task # 4
+SELECT COUNT(*) AS product_count
+FROM products
+WHERE price BETWEEN 20 AND 100;
+
+-- task # 5
+SELECT supplier_id, COUNT(*) AS product_count, ROUND(AVG(price), 2) AS avg_price
+FROM products
+GROUP BY supplier_id
+ORDER BY supplier_id;
+
